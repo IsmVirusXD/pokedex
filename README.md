@@ -1,16 +1,18 @@
-# pokedex
+# Pokedex App
 
-A new Flutter project.
+## Portugues BR
 
-## Getting Started
+Essa aplicação é usada como parte da minha do meu apredizado: Trabalhando com API
+estarei utilizando da Pokemon API, podendo ser encontrado no site {https://pokeapi.co/docs/} sendo ela gratuita
 
-This project is a starting point for a Flutter application.
+A ideia por tras dessa aplicação é fazer uma pokedex similar a existente no jogo, contendo todas as funcionalidades principais e todos as demais informações que podemo tirar da propria API. Simultaneamente temos um estudo de gerencia de Estados para mudar o FrontEnd de acorodo com que os Dados irão aparecer
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## English
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+this App is used as a part of my learning experiences: Working with API
+im using the free Pokemon API, you can find the doc at {https://pokeapi.co/docs/},
+
+
+The idea behind this aplication is to make an an Pokedex similar to the Game one, with all the important features an information that we can get from the API, at the same time Working with state manager to make de FrontEnd changes as new information come and go 
+
