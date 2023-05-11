@@ -1,13 +1,25 @@
-import 'dart:convert';
+/*import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import '../model/model/pokemon.dart';
 
 class PokemonAPI {
+/*
+  static Future<Map> callPokemon(String name) async {
+    print("Calling Pokemon");
+    final url = 'https://pokeapi.co/api/v2/pokedex/{$name}/';
+    final uri = Uri.parse(url);
+    final response = await http.get(uri);
+    final body = response.body;
+    var json = jsonDecode(body);
+    print("calling pokemon - complete");
+    id = json['id'];
+    name = json['name'];
+    return json;
+  }
 
+*/
 
-
-  
   static Future<List<Pokemon>> callAPI() async {
     List<Pokemon> pokedex = [];
     print("Calling API");
@@ -40,3 +52,4 @@ class PokemonAPI {
     return pokedex;
   }
 }
+*/

@@ -1,0 +1,42 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import '../model/model/pokemon.dart';
+
+class PokeInfoPage extends StatelessWidget {
+  final String nomePokemon;
+  const PokeInfoPage({super.key, required this.nomePokemon});
+
+  @override
+  Widget build(BuildContext context) {
+    dynamic pokemon;
+    callApi(nomePokemon);
+
+    return Column(
+      children: [
+        Text(
+          pokemon.name,
+          style: const TextStyle(color: Colors.white),
+        )
+      ],
+    );
+  }
+
+  Future<Pokemon> callApi(String name) async {
+    print("Calling Pokemon");
+    final url = 'https://pokeapi.co/api/v2/pokemon/$name/';
+    final uri = Uri.parse(url);
+    final response = await http.get(uri);
+    final body = response.body;
+    var json = jsonDecode(body);
+    print("calling pokemon - complete");
+    //print("Valores Atribuidos");
+    return Pokemon(
+      id: json['id'],
+      name: json['name'],
+      sprite: json['sprites']["front_default"],
+      type1: json['types'][0]['type']['name'],
+      type2: json['types'][1]['type']['name'],
+    );
+  }
+}

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'pokemoninfo.dart';
 import 'package:http/http.dart' as http;
 
 class HomeScreen extends StatefulWidget {
@@ -74,6 +75,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           upperCase(name),
                           style: const TextStyle(fontSize: 30),
                         ),
+                        onTap: () {
+                          var nome = pokemon['pokemon_species']['name'];
+                          //Future<Pokemon> infopokemon = callPokemon(nome);
+                          //print(nome);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PokeInfoPage(pkm: nome)));
+                        },
                       );
                     }),
               ),
@@ -87,9 +98,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Text(item),
       );
 
+
+
   void callAPI() async {
-    print("Calling API");
-    final url;
+    //print("Calling API");
+    final String url;
 
     switch (value) {
       case "national":
